@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D254C7CD238BA81100E4B7E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7CC238BA81100E4B7E1 /* AppDelegate.swift */; };
+		D254C7CF238BA81100E4B7E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7CE238BA81100E4B7E1 /* SceneDelegate.swift */; };
+		D254C7D1238BA81100E4B7E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7D0238BA81100E4B7E1 /* ContentView.swift */; };
+		D254C7D3238BA81600E4B7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7D2238BA81600E4B7E1 /* Assets.xcassets */; };
+		D254C7D6238BA81600E4B7E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7D5238BA81600E4B7E1 /* Preview Assets.xcassets */; };
+		D254C7D9238BA81600E4B7E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D254C7D7238BA81600E4B7E1 /* LaunchScreen.storyboard */; };
+		D254C7DE238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D254C7DD238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D254C7E4238BA81600E4B7E1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D254C7E2238BA81600E4B7E1 /* Interface.storyboard */; };
+		D254C7E6238BA81800E4B7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7E5238BA81800E4B7E1 /* Assets.xcassets */; };
+		D254C7ED238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D254C7EC238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D254C7F2238BA81800E4B7E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7F1238BA81800E4B7E1 /* ContentView.swift */; };
+		D254C7F4238BA81800E4B7E1 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7F3238BA81800E4B7E1 /* HostingController.swift */; };
+		D254C7F6238BA81800E4B7E1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7F5238BA81800E4B7E1 /* ExtensionDelegate.swift */; };
+		D254C7F8238BA81800E4B7E1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7F7238BA81800E4B7E1 /* NotificationController.swift */; };
+		D254C7FA238BA81800E4B7E1 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7F9238BA81800E4B7E1 /* NotificationView.swift */; };
+		D254C7FC238BA81900E4B7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7FB238BA81900E4B7E1 /* Assets.xcassets */; };
+		D254C7FF238BA81900E4B7E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7FE238BA81900E4B7E1 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D254C7DF238BA81600E4B7E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D254C7C1238BA81100E4B7E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D254C7DC238BA81600E4B7E1;
+			remoteInfo = "SpentAll Expense Tracker WatchKit App";
+		};
+		D254C7EE238BA81800E4B7E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D254C7C1238BA81100E4B7E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D254C7EB238BA81800E4B7E1;
+			remoteInfo = "SpentAll Expense Tracker WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D254C807238BA81900E4B7E1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D254C7ED238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D254C80B238BA81900E4B7E1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D254C7DE238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D254C7C9238BA81100E4B7E1 /* SpentAll Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpentAll Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D254C7CC238BA81100E4B7E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D254C7CE238BA81100E4B7E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D254C7D0238BA81100E4B7E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D254C7D2238BA81600E4B7E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D254C7D5238BA81600E4B7E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D254C7D8238BA81600E4B7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D254C7DA238BA81600E4B7E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D254C7DD238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpentAll Expense Tracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D254C7E3238BA81600E4B7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D254C7E5238BA81800E4B7E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D254C7E7238BA81800E4B7E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D254C7EC238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SpentAll Expense Tracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D254C7F1238BA81800E4B7E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D254C7F3238BA81800E4B7E1 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D254C7F5238BA81800E4B7E1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D254C7F7238BA81800E4B7E1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D254C7F9238BA81800E4B7E1 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D254C7FB238BA81900E4B7E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D254C7FE238BA81900E4B7E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D254C800238BA81900E4B7E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D254C801238BA81900E4B7E1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D254C7C6238BA81100E4B7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D254C7E9238BA81800E4B7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D254C7C0238BA81100E4B7E1 = {
+			isa = PBXGroup;
+			children = (
+				D254C7CB238BA81100E4B7E1 /* SpentAll Expense Tracker */,
+				D254C7E1238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App */,
+				D254C7F0238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension */,
+				D254C7CA238BA81100E4B7E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D254C7CA238BA81100E4B7E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D254C7C9238BA81100E4B7E1 /* SpentAll Expense Tracker.app */,
+				D254C7DD238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App.app */,
+				D254C7EC238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D254C7CB238BA81100E4B7E1 /* SpentAll Expense Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				D254C7CC238BA81100E4B7E1 /* AppDelegate.swift */,
+				D254C7CE238BA81100E4B7E1 /* SceneDelegate.swift */,
+				D254C7D0238BA81100E4B7E1 /* ContentView.swift */,
+				D254C7D2238BA81600E4B7E1 /* Assets.xcassets */,
+				D254C7D7238BA81600E4B7E1 /* LaunchScreen.storyboard */,
+				D254C7DA238BA81600E4B7E1 /* Info.plist */,
+				D254C7D4238BA81600E4B7E1 /* Preview Content */,
+			);
+			path = "SpentAll Expense Tracker";
+			sourceTree = "<group>";
+		};
+		D254C7D4238BA81600E4B7E1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D254C7D5238BA81600E4B7E1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D254C7E1238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D254C7E2238BA81600E4B7E1 /* Interface.storyboard */,
+				D254C7E5238BA81800E4B7E1 /* Assets.xcassets */,
+				D254C7E7238BA81800E4B7E1 /* Info.plist */,
+			);
+			path = "SpentAll Expense Tracker WatchKit App";
+			sourceTree = "<group>";
+		};
+		D254C7F0238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D254C7F1238BA81800E4B7E1 /* ContentView.swift */,
+				D254C7F3238BA81800E4B7E1 /* HostingController.swift */,
+				D254C7F5238BA81800E4B7E1 /* ExtensionDelegate.swift */,
+				D254C7F7238BA81800E4B7E1 /* NotificationController.swift */,
+				D254C7F9238BA81800E4B7E1 /* NotificationView.swift */,
+				D254C7FB238BA81900E4B7E1 /* Assets.xcassets */,
+				D254C800238BA81900E4B7E1 /* Info.plist */,
+				D254C801238BA81900E4B7E1 /* PushNotificationPayload.apns */,
+				D254C7FD238BA81900E4B7E1 /* Preview Content */,
+			);
+			path = "SpentAll Expense Tracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D254C7FD238BA81900E4B7E1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D254C7FE238BA81900E4B7E1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D254C7C8238BA81100E4B7E1 /* SpentAll Expense Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D254C80C238BA81900E4B7E1 /* Build configuration list for PBXNativeTarget "SpentAll Expense Tracker" */;
+			buildPhases = (
+				D254C7C5238BA81100E4B7E1 /* Sources */,
+				D254C7C6238BA81100E4B7E1 /* Frameworks */,
+				D254C7C7238BA81100E4B7E1 /* Resources */,
+				D254C80B238BA81900E4B7E1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D254C7E0238BA81600E4B7E1 /* PBXTargetDependency */,
+			);
+			name = "SpentAll Expense Tracker";
+			productName = "SpentAll Expense Tracker";
+			productReference = D254C7C9238BA81100E4B7E1 /* SpentAll Expense Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D254C7DC238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D254C808238BA81900E4B7E1 /* Build configuration list for PBXNativeTarget "SpentAll Expense Tracker WatchKit App" */;
+			buildPhases = (
+				D254C7DB238BA81600E4B7E1 /* Resources */,
+				D254C807238BA81900E4B7E1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D254C7EF238BA81800E4B7E1 /* PBXTargetDependency */,
+			);
+			name = "SpentAll Expense Tracker WatchKit App";
+			productName = "SpentAll Expense Tracker WatchKit App";
+			productReference = D254C7DD238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D254C7EB238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D254C804238BA81900E4B7E1 /* Build configuration list for PBXNativeTarget "SpentAll Expense Tracker WatchKit Extension" */;
+			buildPhases = (
+				D254C7E8238BA81800E4B7E1 /* Sources */,
+				D254C7E9238BA81800E4B7E1 /* Frameworks */,
+				D254C7EA238BA81800E4B7E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpentAll Expense Tracker WatchKit Extension";
+			productName = "SpentAll Expense Tracker WatchKit Extension";
+			productReference = D254C7EC238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D254C7C1238BA81100E4B7E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Brian MacPherson";
+				TargetAttributes = {
+					D254C7C8238BA81100E4B7E1 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					D254C7DC238BA81600E4B7E1 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					D254C7EB238BA81800E4B7E1 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = D254C7C4238BA81100E4B7E1 /* Build configuration list for PBXProject "SpentAll Expense Tracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D254C7C0238BA81100E4B7E1;
+			productRefGroup = D254C7CA238BA81100E4B7E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D254C7C8238BA81100E4B7E1 /* SpentAll Expense Tracker */,
+				D254C7DC238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App */,
+				D254C7EB238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D254C7C7238BA81100E4B7E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D254C7D9238BA81600E4B7E1 /* LaunchScreen.storyboard in Resources */,
+				D254C7D6238BA81600E4B7E1 /* Preview Assets.xcassets in Resources */,
+				D254C7D3238BA81600E4B7E1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D254C7DB238BA81600E4B7E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D254C7E6238BA81800E4B7E1 /* Assets.xcassets in Resources */,
+				D254C7E4238BA81600E4B7E1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D254C7EA238BA81800E4B7E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D254C7FF238BA81900E4B7E1 /* Preview Assets.xcassets in Resources */,
+				D254C7FC238BA81900E4B7E1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D254C7C5238BA81100E4B7E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D254C7CD238BA81100E4B7E1 /* AppDelegate.swift in Sources */,
+				D254C7CF238BA81100E4B7E1 /* SceneDelegate.swift in Sources */,
+				D254C7D1238BA81100E4B7E1 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D254C7E8238BA81800E4B7E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D254C7F4238BA81800E4B7E1 /* HostingController.swift in Sources */,
+				D254C7F2238BA81800E4B7E1 /* ContentView.swift in Sources */,
+				D254C7F8238BA81800E4B7E1 /* NotificationController.swift in Sources */,
+				D254C7F6238BA81800E4B7E1 /* ExtensionDelegate.swift in Sources */,
+				D254C7FA238BA81800E4B7E1 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D254C7E0238BA81600E4B7E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D254C7DC238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App */;
+			targetProxy = D254C7DF238BA81600E4B7E1 /* PBXContainerItemProxy */;
+		};
+		D254C7EF238BA81800E4B7E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D254C7EB238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension */;
+			targetProxy = D254C7EE238BA81800E4B7E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D254C7D7238BA81600E4B7E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D254C7D8238BA81600E4B7E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D254C7E2238BA81600E4B7E1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D254C7E3238BA81600E4B7E1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D254C802238BA81900E4B7E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D254C803238BA81900E4B7E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D254C805238BA81900E4B7E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SpentAll Expense Tracker WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = AY47KJ5YA8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SpentAll Expense Tracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		D254C806238BA81900E4B7E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SpentAll Expense Tracker WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = AY47KJ5YA8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SpentAll Expense Tracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		D254C809238BA81900E4B7E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AY47KJ5YA8;
+				IBSC_MODULE = SpentAll_Expense_Tracker_WatchKit_Extension;
+				INFOPLIST_FILE = "SpentAll Expense Tracker WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		D254C80A238BA81900E4B7E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AY47KJ5YA8;
+				IBSC_MODULE = SpentAll_Expense_Tracker_WatchKit_Extension;
+				INFOPLIST_FILE = "SpentAll Expense Tracker WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		D254C80D238BA81900E4B7E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SpentAll Expense Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = AY47KJ5YA8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SpentAll Expense Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D254C80E238BA81900E4B7E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SpentAll Expense Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = AY47KJ5YA8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SpentAll Expense Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D254C7C4238BA81100E4B7E1 /* Build configuration list for PBXProject "SpentAll Expense Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D254C802238BA81900E4B7E1 /* Debug */,
+				D254C803238BA81900E4B7E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D254C804238BA81900E4B7E1 /* Build configuration list for PBXNativeTarget "SpentAll Expense Tracker WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D254C805238BA81900E4B7E1 /* Debug */,
+				D254C806238BA81900E4B7E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D254C808238BA81900E4B7E1 /* Build configuration list for PBXNativeTarget "SpentAll Expense Tracker WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D254C809238BA81900E4B7E1 /* Debug */,
+				D254C80A238BA81900E4B7E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D254C80C238BA81900E4B7E1 /* Build configuration list for PBXNativeTarget "SpentAll Expense Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D254C80D238BA81900E4B7E1 /* Debug */,
+				D254C80E238BA81900E4B7E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D254C7C1238BA81100E4B7E1 /* Project object */;
+}
