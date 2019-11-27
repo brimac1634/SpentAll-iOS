@@ -30,7 +30,7 @@ struct Ring: View {
                     self.showRing.toggle()
             }
             Text("\(percent)%")
-                .font(.system(size: 80))
+                .font(Font.rubik(80))
                 .foregroundColor(Color.spentPink())
         }
         

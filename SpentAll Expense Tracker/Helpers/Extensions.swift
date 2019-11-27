@@ -43,3 +43,12 @@ extension UIColor {
         return UIColor(red: 247 / 255, green: 249 / 255, blue: 252 / 255, alpha: a)
     }
 }
+
+extension Font {
+    static func rubik(_ size: CGFloat = 20) -> Font {
+        return Font.custom("Rubik-Regular", size: size)
+    }
+    static func karla(_ size: CGFloat = 20) -> Font {
+        return Font.custom("Karla-Regular", size: size)
+    }
+}

@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct Home: View {
+    
+    
     var body: some View {
         ZStack {
             Color.spentDarkPurple()
@@ -19,24 +21,26 @@ struct Home: View {
                 HStack {
                     Text("22%")
                         .foregroundColor(.spentPink())
-                        .font(.system(size: 30))
+                        .font(Font.rubik(30))
+                    
+                        
                     Text("of your monthly limit")
-                        .foregroundColor(.spentBlue())
-                        .font(.system(size: 20))
+                        .foregroundColor(.spentWhite())
+                        .font(Font.karla(20))
                 }
                 Text("or")
-                    .foregroundColor(.spentBlue())
-                    .font(.system(size: 20))
+                    .foregroundColor(.spentWhite())
+                    .font(Font.karla(20))
                 HStack {
                     Text("$1,500")
                         .foregroundColor(.spentPink())
-                        .font(.system(size: 30))
+                        .font(Font.rubik(30))
                     Text("of your monthly limit")
-                        .foregroundColor(.spentBlue())
-                        .font(.system(size: 20))
+                        .foregroundColor(.spentWhite())
+                        .font(Font.karla(20))
                     Text("$8,000")
                         .foregroundColor(.spentPink())
-                        .font(.system(size: 30))
+                        .font(Font.rubik(30))
                 }
                 Spacer()
             }

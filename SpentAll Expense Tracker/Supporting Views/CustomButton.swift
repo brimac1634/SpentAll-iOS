@@ -19,7 +19,7 @@ struct CustomButton: View {
             Text(label)
                 .fontWeight(.semibold)
                 .tracking(4)
-                .font(.title)
+                .font(Font.karla(30))
         }
         .buttonStyle(GradientBackgroundStyle())
     }
