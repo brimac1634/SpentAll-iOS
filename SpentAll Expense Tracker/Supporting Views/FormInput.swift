@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct FormInput: View {
-    @State var text: String = ""
+    @State var textInput: String = ""
     var body: some View {
         
-        TextField("some text", text: $text)
+        TextField("some text", text: $textInput)
             .border(Color.black)
             
         

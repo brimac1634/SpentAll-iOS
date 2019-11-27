@@ -12,11 +12,14 @@ struct Ring: View {
     @State var percent: Int = 0
     @State private var showRing = false
     
+    static let colors = Gradient(colors: [.spentPink(), .spentBlue()])
+    static let conic = AngularGradient(gradient: colors, center: .center, startAngle: .zero, endAngle: .degrees(360))
+    
     var body: some View {
         ZStack {
             Circle()
-                .trim(from: showRing ? 0.25 : 1, to: 1)
-                .stroke(style: StrokeStyle(lineWidth: 30, lineCap: .round, lineJoin: .round))
+                .trim(from: showRing ? 0.2 : 1, to: 1)
+                .stroke(Ring.conic, style: StrokeStyle(lineWidth: 30, lineCap: .butt))
                 .foregroundColor(Color.spentBlue())
                 .frame(width: 300, height: 300)
                 .rotationEffect(.degrees(90))

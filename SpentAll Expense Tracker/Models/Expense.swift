@@ -1,5 +1,5 @@
 //
-//  Expenditure.swift
+//  Expense.swift
 //  SpentAll Expense Tracker
 //
 //  Created by Brian MacPherson on 25/11/2019.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Expenditure: Hashable, Codable, Identifiable {
+struct Expense: Hashable, Codable, Identifiable {
     var id: Int
     var user_id: Int
     var currency: String

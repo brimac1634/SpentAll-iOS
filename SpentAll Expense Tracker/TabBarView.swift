@@ -9,11 +9,16 @@
 import SwiftUI
 
 struct TabBarView: View {
-    
+    @EnvironmentObject var environmentData: EnvironmentData
     @State var selected = 0
+    @State var showWelcome = true
+    
     
     var body: some View {
         ZStack {
+            NavigationLink(destination: SignIn(), isActive: $showWelcome) {
+                EmptyView()
+            }
             Color.spentDarkPurple()
                 .edgesIgnoringSafeArea(.all)
             TabView(selection: $selected) {
@@ -44,11 +49,21 @@ struct TabBarView: View {
                         .accentColor(Color.spentWhite())
                     Text("\(Constants.TabBarText.tabBar3)")
                 }).tag(3)
-            }.accentColor(Color.spentPink())
-            
-            
+            }
+            .accentColor(Color.spentPink())
+            .onAppear(perform: checkAuthentication)
         }
-        
+    }
+    
+    private func checkAuthentication() {
+        SpentAllClient().checkUser() { result in
+            switch result {
+            case .success(let user):
+                print("\(user)")
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
     }
 }
 
@@ -56,9 +71,9 @@ extension UITabBarController {
     override open func viewDidLoad() {
         let standardAppearance = UITabBarAppearance()
         standardAppearance.backgroundColor = UIColor.spentPurple()
-    standardAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.spentWhite()]
+        standardAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.spentWhite()]
         standardAppearance.stackedLayoutAppearance.normal.iconColor = UIColor.spentWhite()
-    standardAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.spentPink()]
+        standardAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.spentPink()]
         
         tabBar.standardAppearance = standardAppearance
     }

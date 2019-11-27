@@ -12,7 +12,34 @@ struct Home: View {
     var body: some View {
         ZStack {
             Color.spentDarkPurple()
-            Ring()
+            VStack {
+                Spacer()
+                Ring()
+                Spacer()
+                HStack {
+                    Text("22%")
+                        .foregroundColor(.spentPink())
+                        .font(.system(size: 30))
+                    Text("of your monthly limit")
+                        .foregroundColor(.spentBlue())
+                        .font(.system(size: 20))
+                }
+                Text("or")
+                    .foregroundColor(.spentBlue())
+                    .font(.system(size: 20))
+                HStack {
+                    Text("$1,500")
+                        .foregroundColor(.spentPink())
+                        .font(.system(size: 30))
+                    Text("of your monthly limit")
+                        .foregroundColor(.spentBlue())
+                        .font(.system(size: 20))
+                    Text("$8,000")
+                        .foregroundColor(.spentPink())
+                        .font(.system(size: 30))
+                }
+                Spacer()
+            }
         }
     }
 }
