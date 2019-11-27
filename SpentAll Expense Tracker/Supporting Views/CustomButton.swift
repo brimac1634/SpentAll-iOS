@@ -10,39 +10,42 @@
 import SwiftUI
 
 struct CustomButton: View {
-    var label: String = "Hey There"
+    let label: String
+    let isOn: Bool
+    let selected: Bool
+    let action: () -> Void
     
     var body: some View {
         Button(action: {
-            print("Edit tapped!")
+            self.action()
         }) {
             Text(label)
                 .fontWeight(.semibold)
                 .tracking(4)
                 .font(Font.karla(30))
         }
-        .buttonStyle(GradientBackgroundStyle())
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .padding()
+        .foregroundColor(.spentWhite())
+        .background(LinearGradient(gradient: selected ? pinkGradient : purpleGradient, startPoint: .leading, endPoint: .trailing))
+        .cornerRadius(4)
+        .padding(.horizontal, 20)
     }
+    let purpleGradient = Gradient(colors: [Color.spentPurple(), Color(red: 150 / 255, green: 173 / 255, blue: 250 / 255)])
+    let pinkGradient = Gradient(colors: [Color.spentPink(), Color(red: 255 / 255, green: 214 / 255, blue: 250 / 255)])
 }
 
-struct GradientBackgroundStyle: ButtonStyle {
-    
-    let normalGradient = Gradient(colors: [Color.spentPurple(), Color(red: 150 / 255, green: 173 / 255, blue: 250 / 255)])
-    let selectedGradient = Gradient(colors: [Color.spentPurple(), Color(red: 176 / 255, green: 192 / 255, blue: 245 / 255)])
-    
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .padding()
-            .foregroundColor(.spentWhite())
-            .background(LinearGradient(gradient: configuration.isPressed ? selectedGradient : normalGradient, startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(4)
-            .padding(.horizontal, 20)
-    }
-}
-
+#if DEBUG
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton()
+        VStack {
+            CustomButton(label: "Test", isOn: true, selected: false, action: {
+                
+            }).padding([.vertical], 10)
+            CustomButton(label: "Test", isOn: true, selected: true, action: {
+                
+            }).padding([.vertical], 10)
+        }
     }
 }
+#endif

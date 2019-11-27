@@ -32,10 +32,10 @@ class SpentAllClient: GenericAPIClient {
         }, completion: completion)
     }
     
-    func checkUser(completion: @escaping (Result<UserSettings?, APIError>) -> ()) {
-        guard let request = SpentAllEndpoint.checkUser.getRequest(headers: [HTTPHeader.contentType("application/json")]) else { return }
-        fetch(with: request, decode: { json -> UserSettings? in
-            guard let results = json as? UserSettings else { return  nil }
+    func checkUser(completion: @escaping (Result<Name?, APIError>) -> ()) {
+        guard let request = SpentAllEndpoint.checkUser.getRequest(headers: nil) else { return }
+        fetch(with: request, decode: { json -> Name? in
+            guard let results = json as? Name else { return  nil }
             return results
         }, completion: completion)
     }

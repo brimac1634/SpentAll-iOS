@@ -18,13 +18,14 @@
 		D22D790F238E457400329437 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D790E238E457400329437 /* UserSettings.swift */; };
 		D22D7911238E4D8F00329437 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7910238E4D8F00329437 /* SignIn.swift */; };
 		D22D7913238E504D00329437 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7912238E504D00329437 /* Welcome.swift */; };
-		D22D7919238E6FD200329437 /* FontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7918238E6FD200329437 /* FontModifier.swift */; };
 		D22D791C238E7AF800329437 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D22D791A238E7AF800329437 /* Karla-Regular.ttf */; };
 		D22D791D238E7AF800329437 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D22D791A238E7AF800329437 /* Karla-Regular.ttf */; };
 		D22D791E238E7AF800329437 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D22D791A238E7AF800329437 /* Karla-Regular.ttf */; };
 		D22D791F238E7AF800329437 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D22D791B238E7AF800329437 /* Rubik-Regular.ttf */; };
 		D22D7920238E7AF800329437 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D22D791B238E7AF800329437 /* Rubik-Regular.ttf */; };
 		D22D7921238E7AF800329437 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D22D791B238E7AF800329437 /* Rubik-Regular.ttf */; };
+		D22D7923238E911400329437 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7922238E911400329437 /* Name.swift */; };
+		D22D7924238E911400329437 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7922238E911400329437 /* Name.swift */; };
 		D254C7CD238BA81100E4B7E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7CC238BA81100E4B7E1 /* AppDelegate.swift */; };
 		D254C7CF238BA81100E4B7E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7CE238BA81100E4B7E1 /* SceneDelegate.swift */; };
 		D254C7D1238BA81100E4B7E1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7D0238BA81100E4B7E1 /* TabBarView.swift */; };
@@ -109,10 +110,10 @@
 		D22D790E238E457400329437 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		D22D7910238E4D8F00329437 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		D22D7912238E504D00329437 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
-		D22D7918238E6FD200329437 /* FontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifier.swift; sourceTree = "<group>"; };
 		D22D791A238E7AF800329437 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		D22D791B238E7AF800329437 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		D254C7C9238BA81100E4B7E1 /* SpentAll Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpentAll Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22D7922238E911400329437 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		D254C7C9238BA81100E4B7E1 /* SpentAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpentAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D254C7CC238BA81100E4B7E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D254C7CE238BA81100E4B7E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D254C7D0238BA81100E4B7E1 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 				D254C81C238CD6C500E4B7E1 /* Constants.swift */,
 				D22D7909238E33C800329437 /* API */,
 				D254C817238BD40700E4B7E1 /* Extensions.swift */,
-				D22D7918238E6FD200329437 /* FontModifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 		D254C7CA238BA81100E4B7E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D254C7C9238BA81100E4B7E1 /* SpentAll Expense Tracker.app */,
+				D254C7C9238BA81100E4B7E1 /* SpentAll.app */,
 				D254C7DD238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App.app */,
 				D254C7EC238BA81800E4B7E1 /* SpentAll Expense Tracker WatchKit Extension.appex */,
 			);
@@ -295,6 +295,7 @@
 				D254C810238BBBF500E4B7E1 /* Expense.swift */,
 				D254C812238BBE5F00E4B7E1 /* EnvironmentData.swift */,
 				D22D790E238E457400329437 /* UserSettings.swift */,
+				D22D7922238E911400329437 /* Name.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,7 +342,7 @@
 			);
 			name = "SpentAll Expense Tracker";
 			productName = "SpentAll Expense Tracker";
-			productReference = D254C7C9238BA81100E4B7E1 /* SpentAll Expense Tracker.app */;
+			productReference = D254C7C9238BA81100E4B7E1 /* SpentAll.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D254C7DC238BA81600E4B7E1 /* SpentAll Expense Tracker WatchKit App */ = {
@@ -468,12 +469,12 @@
 				D254C7CF238BA81100E4B7E1 /* SceneDelegate.swift in Sources */,
 				D254C813238BBE5F00E4B7E1 /* EnvironmentData.swift in Sources */,
 				D254C823238CE07800E4B7E1 /* Settings.swift in Sources */,
-				D22D7919238E6FD200329437 /* FontModifier.swift in Sources */,
 				D22D7911238E4D8F00329437 /* SignIn.swift in Sources */,
 				D254C827238D078900E4B7E1 /* CustomButton.swift in Sources */,
 				D254C825238CF72B00E4B7E1 /* Ring.swift in Sources */,
 				D254C821238CE06300E4B7E1 /* List.swift in Sources */,
 				D22D7902238E2F7C00329437 /* APIResult.swift in Sources */,
+				D22D7923238E911400329437 /* Name.swift in Sources */,
 				D254C81A238BDB8700E4B7E1 /* Home.swift in Sources */,
 				D254C7D1238BA81100E4B7E1 /* TabBarView.swift in Sources */,
 				D254C818238BD40700E4B7E1 /* Extensions.swift in Sources */,
@@ -494,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22D7924238E911400329437 /* Name.swift in Sources */,
 				D254C7F4238BA81800E4B7E1 /* HostingController.swift in Sources */,
 				D254C7F2238BA81800E4B7E1 /* ContentView.swift in Sources */,
 				D254C7F8238BA81800E4B7E1 /* NotificationController.swift in Sources */,
@@ -752,7 +754,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpentAll;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -773,7 +775,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brianmacpherson.SpentAll-Expense-Tracker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpentAll;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

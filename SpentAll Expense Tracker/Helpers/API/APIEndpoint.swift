@@ -24,15 +24,18 @@ extension Endpoint {
         return request
     }
     
-    func appendHeaders(_ headers: [HTTPHeader], _ request: inout URLRequest) -> URLRequest {
+    func appendHeaders(_ headers: [HTTPHeader]?, _ request: inout URLRequest) -> URLRequest {
+        guard let headers = headers else { return request }
         headers.forEach { request.addValue($0.header.value, forHTTPHeaderField: $0.header.field) }
         return request
     }
     
-    func getRequest(headers: [HTTPHeader]) -> URLRequest? {
+    func getRequest(headers: [HTTPHeader]?) -> URLRequest? {
         guard var request = self.request else { return nil }
         request.httpMethod = HTTPMethod.get.rawValue
-        request = appendHeaders(headers, &request)
+        if let headers = headers {
+            request = appendHeaders(headers, &request)
+        }
         return request
     }
     

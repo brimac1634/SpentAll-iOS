@@ -16,7 +16,7 @@ struct Home: View {
             Color.spentDarkPurple()
             VStack {
                 Spacer()
-                Ring()
+                Ring(percent: 0.80)
                 Spacer()
                 HStack {
                     Text("22%")

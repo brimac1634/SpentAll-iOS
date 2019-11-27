@@ -9,16 +9,22 @@
 import SwiftUI
 
 struct Ring: View {
-    @State var percent: Int = 0
+    let percent: CGFloat
+    let percentAsString: String
     @State private var showRing = false
     
     static let colors = Gradient(colors: [.spentPink(), .spentBlue()])
     static let conic = AngularGradient(gradient: colors, center: .center, startAngle: .zero, endAngle: .degrees(360))
     
+    init(percent: CGFloat) {
+        self.percent = percent
+        self.percentAsString = String(format: "%.0f", percent * 100)
+    }
+    
     var body: some View {
         ZStack {
             Circle()
-                .trim(from: showRing ? 0.2 : 1, to: 1)
+                .trim(from: showRing ? (1 - percent) : 1, to: 1)
                 .stroke(Ring.conic, style: StrokeStyle(lineWidth: 30, lineCap: .butt))
                 .foregroundColor(Color.spentBlue())
                 .frame(width: 300, height: 300)
@@ -29,7 +35,7 @@ struct Ring: View {
                 .onAppear() {
                     self.showRing.toggle()
             }
-            Text("\(percent)%")
+            Text("\(percentAsString)%")
                 .font(Font.rubik(80))
                 .foregroundColor(Color.spentPink())
         }
@@ -37,8 +43,10 @@ struct Ring: View {
     }
 }
 
+#if DEBUG
 struct Ring_Previews: PreviewProvider {
     static var previews: some View {
-        Ring()
+        Ring(percent: 0.80)
     }
 }
+#endif
