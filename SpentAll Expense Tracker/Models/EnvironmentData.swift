@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 
 final class EnvironmentData: ObservableObject {
+    @Published var isLoggedIn: Bool = false
     @Published var userID: Int = 0
     @Published var userName: String = ""
     @Published var userEmail: String = ""

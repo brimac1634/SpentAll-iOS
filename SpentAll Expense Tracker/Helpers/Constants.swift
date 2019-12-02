@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct Constants {
-    static let DEV_SERVER = "http://localhost:5000"
-    static let PROD_SERVER = "https://spentall-server.herokuapp.com"
+    static let DEV_SERVER = "http://localhost:5000/"
+    static let PROD_SERVER = "https://spentall-server.herokuapp.com/"
     
     struct TabBarImageName {
         static let tabBar0 = "home"

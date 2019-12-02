@@ -12,7 +12,7 @@ import SwiftUI
 struct CustomButton: View {
     let label: String
     let isOn: Bool
-    let selected: Bool
+    let color: Color
     let action: () -> Void
     
     var body: some View {
@@ -21,28 +21,26 @@ struct CustomButton: View {
         }) {
             Text(label)
                 .fontWeight(.semibold)
-                .tracking(4)
-                .font(Font.karla(30))
+                .kerning(2)
+                .font(Font.rubik(24))
         }
         .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
-        .foregroundColor(.spentWhite())
-        .background(LinearGradient(gradient: selected ? pinkGradient : purpleGradient, startPoint: .leading, endPoint: .trailing))
+        .foregroundColor(color == .spentWhite() ? .spentDarkPurple() : .spentWhite())
+        .background(color)
         .cornerRadius(4)
         .padding(.horizontal, 20)
     }
-    let purpleGradient = Gradient(colors: [Color.spentPurple(), Color(red: 150 / 255, green: 173 / 255, blue: 250 / 255)])
-    let pinkGradient = Gradient(colors: [Color.spentPink(), Color(red: 255 / 255, green: 214 / 255, blue: 250 / 255)])
 }
 
 #if DEBUG
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CustomButton(label: "Test", isOn: true, selected: false, action: {
+            CustomButton(label: "Login", isOn: true, color: Color.spentPink(), action: {
                 
             }).padding([.vertical], 10)
-            CustomButton(label: "Test", isOn: true, selected: true, action: {
+            CustomButton(label: "Test", isOn: true, color: Color.spentPurple(), action: {
                 
             }).padding([.vertical], 10)
         }

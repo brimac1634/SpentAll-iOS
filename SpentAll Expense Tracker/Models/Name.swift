@@ -8,6 +8,16 @@
 
 import Foundation
 
-class Name: Decodable {
+enum NameKeys: CodingKey {
+    case name
+}
+
+class Name: Codable {
     var name: String
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: NameKeys.self)
+
+        name = try container.decode(String.self, forKey: .name)
+    }
 }

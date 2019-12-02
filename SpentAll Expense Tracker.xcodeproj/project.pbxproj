@@ -26,6 +26,7 @@
 		D22D7921238E7AF800329437 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D22D791B238E7AF800329437 /* Rubik-Regular.ttf */; };
 		D22D7923238E911400329437 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7922238E911400329437 /* Name.swift */; };
 		D22D7924238E911400329437 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7922238E911400329437 /* Name.swift */; };
+		D23FD74A238FD5400066C1E1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FD749238FD5400066C1E1 /* SignUp.swift */; };
 		D254C7CD238BA81100E4B7E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7CC238BA81100E4B7E1 /* AppDelegate.swift */; };
 		D254C7CF238BA81100E4B7E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7CE238BA81100E4B7E1 /* SceneDelegate.swift */; };
 		D254C7D1238BA81100E4B7E1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C7D0238BA81100E4B7E1 /* TabBarView.swift */; };
@@ -45,7 +46,7 @@
 		D254C7FF238BA81900E4B7E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7FE238BA81900E4B7E1 /* Preview Assets.xcassets */; };
 		D254C811238BBBF500E4B7E1 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C810238BBBF500E4B7E1 /* Expense.swift */; };
 		D254C813238BBE5F00E4B7E1 /* EnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C812238BBE5F00E4B7E1 /* EnvironmentData.swift */; };
-		D254C816238BD13800E4B7E1 /* FormInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C815238BD13800E4B7E1 /* FormInput.swift */; };
+		D254C816238BD13800E4B7E1 /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C815238BD13800E4B7E1 /* CustomInput.swift */; };
 		D254C818238BD40700E4B7E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C817238BD40700E4B7E1 /* Extensions.swift */; };
 		D254C81A238BDB8700E4B7E1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C819238BDB8700E4B7E1 /* Home.swift */; };
 		D254C81D238CD6C500E4B7E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C81C238CD6C500E4B7E1 /* Constants.swift */; };
@@ -54,6 +55,9 @@
 		D254C823238CE07800E4B7E1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C822238CE07800E4B7E1 /* Settings.swift */; };
 		D254C825238CF72B00E4B7E1 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C824238CF72B00E4B7E1 /* Ring.swift */; };
 		D254C827238D078900E4B7E1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C826238D078900E4B7E1 /* CustomButton.swift */; };
+		D263EB9E2390FABB00935CB6 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263EB9D2390FABB00935CB6 /* ContactUs.swift */; };
+		D2DC725723950AC3008C0AF3 /* WelcomeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC725623950AC3008C0AF3 /* WelcomeInfo.swift */; };
+		D2FC1DD92390BEFB00EB3F14 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FC1DD82390BEFB00EB3F14 /* ViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,7 @@
 		D22D791A238E7AF800329437 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		D22D791B238E7AF800329437 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		D22D7922238E911400329437 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		D23FD749238FD5400066C1E1 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		D254C7C9238BA81100E4B7E1 /* SpentAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpentAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D254C7CC238BA81100E4B7E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D254C7CE238BA81100E4B7E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +142,7 @@
 		D254C801238BA81900E4B7E1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D254C810238BBBF500E4B7E1 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		D254C812238BBE5F00E4B7E1 /* EnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentData.swift; sourceTree = "<group>"; };
-		D254C815238BD13800E4B7E1 /* FormInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInput.swift; sourceTree = "<group>"; };
+		D254C815238BD13800E4B7E1 /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
 		D254C817238BD40700E4B7E1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D254C819238BDB8700E4B7E1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D254C81C238CD6C500E4B7E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -146,6 +151,9 @@
 		D254C822238CE07800E4B7E1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D254C824238CF72B00E4B7E1 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		D254C826238D078900E4B7E1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D263EB9D2390FABB00935CB6 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
+		D2DC725623950AC3008C0AF3 /* WelcomeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInfo.swift; sourceTree = "<group>"; };
+		D2FC1DD82390BEFB00EB3F14 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +180,7 @@
 				D254C81C238CD6C500E4B7E1 /* Constants.swift */,
 				D22D7909238E33C800329437 /* API */,
 				D254C817238BD40700E4B7E1 /* Extensions.swift */,
+				D2FC1DD82390BEFB00EB3F14 /* ViewModifiers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -238,7 +247,6 @@
 				D254C81B238CD63300E4B7E1 /* Supporting Views */,
 				D254C814238BD10900E4B7E1 /* Views */,
 				D254C80F238BBBD000E4B7E1 /* Models */,
-				D254C7D0238BA81100E4B7E1 /* TabBarView.swift */,
 				D254C7D2238BA81600E4B7E1 /* Assets.xcassets */,
 				D254C7D7238BA81600E4B7E1 /* LaunchScreen.storyboard */,
 				D254C7DA238BA81600E4B7E1 /* Info.plist */,
@@ -309,6 +317,10 @@
 				D254C822238CE07800E4B7E1 /* Settings.swift */,
 				D22D7910238E4D8F00329437 /* SignIn.swift */,
 				D22D7912238E504D00329437 /* Welcome.swift */,
+				D254C7D0238BA81100E4B7E1 /* TabBarView.swift */,
+				D23FD749238FD5400066C1E1 /* SignUp.swift */,
+				D263EB9D2390FABB00935CB6 /* ContactUs.swift */,
+				D2DC725623950AC3008C0AF3 /* WelcomeInfo.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,7 +328,7 @@
 		D254C81B238CD63300E4B7E1 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				D254C815238BD13800E4B7E1 /* FormInput.swift */,
+				D254C815238BD13800E4B7E1 /* CustomInput.swift */,
 				D254C824238CF72B00E4B7E1 /* Ring.swift */,
 				D254C826238D078900E4B7E1 /* CustomButton.swift */,
 			);
@@ -462,7 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D254C816238BD13800E4B7E1 /* FormInput.swift in Sources */,
+				D254C816238BD13800E4B7E1 /* CustomInput.swift in Sources */,
 				D254C7CD238BA81100E4B7E1 /* AppDelegate.swift in Sources */,
 				D254C811238BBBF500E4B7E1 /* Expense.swift in Sources */,
 				D254C81F238CE00600E4B7E1 /* Analytics.swift in Sources */,
@@ -471,13 +483,16 @@
 				D254C823238CE07800E4B7E1 /* Settings.swift in Sources */,
 				D22D7911238E4D8F00329437 /* SignIn.swift in Sources */,
 				D254C827238D078900E4B7E1 /* CustomButton.swift in Sources */,
+				D2FC1DD92390BEFB00EB3F14 /* ViewModifiers.swift in Sources */,
 				D254C825238CF72B00E4B7E1 /* Ring.swift in Sources */,
 				D254C821238CE06300E4B7E1 /* List.swift in Sources */,
 				D22D7902238E2F7C00329437 /* APIResult.swift in Sources */,
 				D22D7923238E911400329437 /* Name.swift in Sources */,
 				D254C81A238BDB8700E4B7E1 /* Home.swift in Sources */,
 				D254C7D1238BA81100E4B7E1 /* TabBarView.swift in Sources */,
+				D263EB9E2390FABB00935CB6 /* ContactUs.swift in Sources */,
 				D254C818238BD40700E4B7E1 /* Extensions.swift in Sources */,
+				D2DC725723950AC3008C0AF3 /* WelcomeInfo.swift in Sources */,
 				D22D7904238E30D400329437 /* HTTPMethod.swift in Sources */,
 				D22D790F238E457400329437 /* UserSettings.swift in Sources */,
 				D22D790D238E366300329437 /* SpentAllEndpoint.swift in Sources */,
@@ -487,6 +502,7 @@
 				D22D7913238E504D00329437 /* Welcome.swift in Sources */,
 				D22D7906238E30FF00329437 /* HTTPHeader.swift in Sources */,
 				D254C81D238CD6C500E4B7E1 /* Constants.swift in Sources */,
+				D23FD74A238FD5400066C1E1 /* SignUp.swift in Sources */,
 				D22D7908238E316300329437 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

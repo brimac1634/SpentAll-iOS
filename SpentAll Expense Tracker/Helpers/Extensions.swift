@@ -52,3 +52,15 @@ extension Font {
         return Font.custom("Karla-Regular", size: size)
     }
 }
+
+extension View {
+    func karla() -> some View {
+        self.modifier(Karla())
+    }
+    func spentShadow() -> some View {
+        self.modifier(SpentShadow())
+    }
+    func spentTextFieldStyle() -> some View {
+        self.modifier(SpentTextField())
+    }
+}

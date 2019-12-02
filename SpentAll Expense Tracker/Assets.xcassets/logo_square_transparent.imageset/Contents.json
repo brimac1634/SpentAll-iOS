@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "logo_square_transparent.png",
+      "filename" : "logo_square_transparent@3x.png",
       "scale" : "1x"
     },
     {
