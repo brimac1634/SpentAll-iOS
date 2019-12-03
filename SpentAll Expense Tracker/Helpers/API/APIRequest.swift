@@ -36,7 +36,7 @@ extension GenericAPIClient {
         }
         return task
     }
-    /// success respone executed on main thread.
+    
     func fetch<T: Decodable>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
         let task = decodingTask(with: request, decodingType: T.self) { (json , error) in
             DispatchQueue.main.async {

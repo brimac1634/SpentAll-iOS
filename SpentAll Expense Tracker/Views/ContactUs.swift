@@ -9,7 +9,11 @@
 import SwiftUI
 
 struct ContactUs: View {
-    @State var test = ""
+    @State var name = ""
+    @State var email = ""
+    @State var subject = ""
+    @State var message = ""
+    
     var body: some View {
         ZStack {
             Color.spentDarkPurple()
@@ -21,13 +25,13 @@ struct ContactUs: View {
                     .font(Font.rubik(36))
                     .kerning(4)
                 Spacer()
-                CustomInput(placeholder: "Full Name", hideText: false)
+                CustomInput(placeholder: "Full Name", hideText: false, textInput: $name)
                     .padding(.vertical, CGFloat(10))
-                CustomInput(placeholder: "Email", hideText: true)
+                CustomInput(placeholder: "Email", hideText: true, textInput: $email)
                     .padding(.vertical, CGFloat(10))
-                CustomInput(placeholder: "Subject", hideText: true)
+                CustomInput(placeholder: "Subject", hideText: true, textInput: $subject)
                     .padding(.vertical, CGFloat(10))
-                CustomInput(placeholder: "Message", hideText: true)
+                CustomInput(placeholder: "Message", hideText: true, textInput: $message)
                     .lineLimit(nil)
                     .padding(.vertical, CGFloat(10))
                 //                    .frame(width: .infinity, height: 80)

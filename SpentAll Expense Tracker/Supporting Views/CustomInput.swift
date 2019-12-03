@@ -11,7 +11,7 @@ import SwiftUI
 struct CustomInput: View {
     let placeholder: String
     let hideText: Bool
-    @State var textInput: String = ""
+    @Binding var textInput: String
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -29,13 +29,13 @@ struct CustomInput: View {
     }
 }
 
-#if DEBUG
-struct FormInput_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            CustomInput(placeholder: "Something", hideText: false)
-            CustomInput(placeholder: "Something", hideText: true)
-        }
-    }
-}
-#endif
+//#if DEBUG
+//struct FormInput_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VStack {
+//            CustomInput(placeholder: "Something", hideText: false, textInput: "yes")
+//            CustomInput(placeholder: "Something", hideText: true, textInput: "hey")
+//        }
+//    }
+//}
+//#endif

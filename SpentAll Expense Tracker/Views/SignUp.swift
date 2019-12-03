@@ -10,6 +10,8 @@ import SwiftUI
 
 struct SignUp: View {
     let isReset: Bool
+    @State var name = ""
+    @State var email = ""
     
     var body: some View {
         ZStack {
@@ -23,10 +25,10 @@ struct SignUp: View {
                     .kerning(4)
                 Spacer()
                 if !isReset {
-                    CustomInput(placeholder: "Name", hideText: false)
+                    CustomInput(placeholder: "Name", hideText: false, textInput: $name)
                     .padding(.vertical, CGFloat(10))
                 }
-                CustomInput(placeholder: "Email", hideText: true)
+                CustomInput(placeholder: "Email", hideText: true, textInput: $email)
                     .padding(.vertical, CGFloat(10))
                 CustomButton(label: isReset ? "Reset" : "Sign Up", isOn: false, color: Color.spentPink()) {
                     

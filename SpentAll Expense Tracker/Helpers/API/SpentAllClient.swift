@@ -22,8 +22,20 @@ class SpentAllClient: GenericAPIClient {
         let password: String
     }
     
-    func login(email: String, password: String, completion: @escaping (Result<UserSettings?, APIError>) -> ()) {
+//    func login(email: String, password: String, completion: @escaping (Result<UserSettings?, APIError>) -> ()) {
+//        let parameter = loginParameter(email: email, password: password)
+//        print(parameter)
+//        guard let request = SpentAllEndpoint.login.postRequest(parameters: parameter,
+//                                                         headers: [HTTPHeader.contentType("application/json")]) else { return }
+//        fetch(with: request , decode: { json -> UserSettings? in
+//            guard let results = json as? UserSettings else { return  nil }
+//            return results
+//        }, completion: completion)
+//    }
+    
+    func login(parameters: , completion: @escaping (Result<UserSettings?, APIError>) -> ()) {
         let parameter = loginParameter(email: email, password: password)
+        print(parameter)
         guard let request = SpentAllEndpoint.login.postRequest(parameters: parameter,
                                                          headers: [HTTPHeader.contentType("application/json")]) else { return }
         fetch(with: request , decode: { json -> UserSettings? in
