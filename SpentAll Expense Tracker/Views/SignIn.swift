@@ -12,6 +12,8 @@ struct SignIn: View {
     @State var email: String = ""
     @State var password: String = ""
     
+    var networkManager: NetworkManager
+    
     var body: some View {
         ZStack {
             Color.spentDarkPurple()
@@ -50,12 +52,12 @@ struct SignIn: View {
     }
     
     func login(_ email: String, _ password: String) {
-        SpentAllClient().login(email: email, password: password) { result in
-            switch result {
-            case .success(let user):
-                print(user?.userName ?? "")
-            case .failure(let error):
-                print("error: \(error)")
+        networkManager.login(email: email, password: password) { (userSettings, error) in
+            if let error = error {
+                print(error)
+            }
+            if let userSettings = userSettings {
+                print(userSettings)
             }
         }
     }
@@ -63,6 +65,6 @@ struct SignIn: View {
 
 struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn()
+        SignIn(networkManager: NetworkManager())
     }
 }

@@ -11,16 +11,16 @@ import SwiftUI
 struct Welcome: View {
     @EnvironmentObject var environmentData: EnvironmentData
     
-    private func checkAuthentication() {
-        SpentAllClient().checkUser() { result in
-            switch result {
-            case .success(let user):
-                print(user?.name ?? "")
-            case .failure(let error):
-                print("error: \(error)")
-            }
-        }
-    }
+//    private func checkAuthentication() {
+//        SpentAllClient().checkUser() { result in
+//            switch result {
+//            case .success(let user):
+//                print(user?.name ?? "")
+//            case .failure(let error):
+//                print("error: \(error)")
+//            }
+//        }
+//    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -45,7 +45,7 @@ struct Welcome: View {
                         }
                         Spacer()
                         VStack {
-                            NavigationLink(destination: SignIn()) {
+                            NavigationLink(destination: SignIn(networkManager: NetworkManager())) {
                                 CustomButton(label: "Login", isOn: true, color: .spentPurple()) {
                                 }.padding(.vertical, CGFloat(10))
                             }
@@ -81,7 +81,7 @@ struct Welcome: View {
                     .imageScale(.large)
                     .padding(.trailing, (geometry.size.width / 2.0) + -30) // image width = 60
             )
-                .onAppear(perform: self.checkAuthentication)
+//                .onAppear(perform: self.checkAuthentication)
             
         }
         

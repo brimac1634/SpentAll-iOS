@@ -10,6 +10,7 @@ import Foundation
 
 class Router<EndPoint: EndPointType>: NetworkRouter {
     private var task: URLSessionTask?
+//    let tokenHeader = ["x-access-token": "Bearer \(token)"]
     
     fileprivate func addAdditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
         guard let headers = additionalHeaders else { return }

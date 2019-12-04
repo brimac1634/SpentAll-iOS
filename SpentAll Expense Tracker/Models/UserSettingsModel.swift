@@ -1,5 +1,5 @@
 //
-//  UserSettings.swift
+//  UserSettingsModel.swift
 //  SpentAll Expense Tracker
 //
 //  Created by Brian MacPherson on 27/11/2019.
@@ -8,23 +8,36 @@
 
 import Foundation
 
-enum CodingKeys: CodingKey {
-    case userID, userName, userEmail, target, cycle, currency, categories
+struct UserSettingsResponse: Decodable {
+    var user: UserSettings
+    
+    private enum UserSettingsResponseCodingKeys: CodingKey {
+        case user
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: UserSettingsResponseCodingKeys.self)
+
+        user = try container.decode(UserSettings.self, forKey: .user)
+    }
+    
 }
 
-class UserSettings: Decodable {
-    var userID: Int = 0
-    var userName: String = ""
-    var userEmail: String = ""
-    var target: Int = 0
-    var cycle: String = "monthly"
-    var currency: String = "HKD"
-    var categories: String = "food, housing, transportation, travel, entertainment, clothing, groceries, utilities, health, education, work"
+struct UserSettings: Decodable {
+    var userName: String
+    var userEmail: String
+    var target: Int
+    var cycle: String
+    var currency: String
+    var categories: String
     
-    required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
+    private enum UserSettingsCodingKeys: CodingKey {
+        case userName, userEmail, target, cycle, currency, categories
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: UserSettingsCodingKeys.self)
 
-        userID = try container.decode(Int.self, forKey: .userID)
         userName = try container.decode(String.self, forKey: .userName)
         userEmail = try container.decode(String.self, forKey: .userEmail)
         target = try container.decode(Int.self, forKey: .target)
@@ -32,6 +45,10 @@ class UserSettings: Decodable {
         currency = try container.decode(String.self, forKey: .currency)
         categories = try container.decode(String.self, forKey: .categories)
     }
+    
+}
+
+    
     
     //    func encode(to encoder: Encoder) throws {
     //        var container = encoder.container(keyedBy: CodingKeys.self)
@@ -47,4 +64,4 @@ class UserSettings: Decodable {
     //        try container.encode(city, forKey: .city)
     //        try container.encode(zip, forKey: .zip)
     //    }
-}
+
