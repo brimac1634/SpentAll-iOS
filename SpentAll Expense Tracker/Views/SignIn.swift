@@ -12,7 +12,6 @@ struct SignIn: View {
     @EnvironmentObject var environmentData: EnvironmentData
     @State var email: String = ""
     @State var password: String = ""
-    @State private var error = true
     
     var networkManager: NetworkManager
     
@@ -49,10 +48,8 @@ struct SignIn: View {
                     .underline(true, color: Color.spentWhite())
                     .foregroundColor(Color.spentWhite())
                 }
+                Spacer()
             }
-        }
-        .alert(isPresented: $error) {
-            Alert(title: Text("test"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
         }
     }
     

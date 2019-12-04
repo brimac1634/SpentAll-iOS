@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Alert {
+struct CustomAlert {
     var title: String
     var message: String
     var leftLabel: String?

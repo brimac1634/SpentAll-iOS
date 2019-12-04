@@ -26,6 +26,7 @@ struct WelcomeInfo: View {
                         .foregroundColor(Color.spentWhite())
                         .font(Font.karla(28))
                 }
+                Spacer()
             }
             
         }

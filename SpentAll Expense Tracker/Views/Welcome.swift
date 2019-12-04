@@ -11,16 +11,16 @@ import SwiftUI
 struct Welcome: View {
     @EnvironmentObject var environmentData: EnvironmentData
     
-//    private func checkAuthentication() {
-//        SpentAllClient().checkUser() { result in
-//            switch result {
-//            case .success(let user):
-//                print(user?.name ?? "")
-//            case .failure(let error):
-//                print("error: \(error)")
-//            }
-//        }
-//    }
+    //    private func checkAuthentication() {
+    //        SpentAllClient().checkUser() { result in
+    //            switch result {
+    //            case .success(let user):
+    //                print(user?.name ?? "")
+    //            case .failure(let error):
+    //                print("error: \(error)")
+    //            }
+    //        }
+    //    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -31,14 +31,18 @@ struct Welcome: View {
                     VStack {
                         Spacer()
                         VStack {
-                            Image("logo_square_transparent")
+                            VStack { Image("logo_square_transparent")
+                                .resizable()
+                                .scaledToFit()
+                            }
+                            .frame(width: geometry.size.width * 0.6)
                             Text(verbatim: "SpentAll")
                                 .foregroundColor(Color.spentPink())
-                                .font(Font.rubik(42))
+                                .font(Font.rubik(36))
                                 .kerning(4)
                             
                             Text("Easy Expense Tracker".uppercased())
-                                .font(Font.karla(24))
+                                .font(Font.karla(20))
                                 .kerning(3)
                                 .foregroundColor(Color.spentWhite())
                                 .padding(8)
@@ -66,10 +70,11 @@ struct Welcome: View {
                         Spacer()
                         NavigationLink(destination: ContactUs()) {
                             Text(verbatim: "contact us")
-                            .kerning(2)
-                            .underline(true, color: Color.spentWhite())
-                            .foregroundColor(Color.spentWhite())
+                                .kerning(2)
+                                .underline(true, color: Color.spentWhite())
+                                .foregroundColor(Color.spentWhite())
                         }
+                        Spacer()
                     }
                     NavigationLink(destination: TabBarView(), isActive: self.$environmentData.isLoggedIn) { EmptyView() }
                 }
@@ -81,10 +86,10 @@ struct Welcome: View {
                     .imageScale(.large)
                     .padding(.trailing, (geometry.size.width / 2.0) + -30) // image width = 60
             )
-//                .alert(isPresented: $environmentData.alert.tit) {
-//                Alert(title: Text(), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+//                .alert(isPresented: environmentData.alert?.title != nil) {
+//                    Alert(title: Text(environmentData.alert?.title), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
 //            }
-//                .onAppear(perform: self.checkAuthentication)
+            //                .onAppear(perform: self.checkAuthentication)
             
         }
         

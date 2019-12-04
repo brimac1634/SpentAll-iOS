@@ -50,6 +50,7 @@ struct SignUp: View {
                     .underline(true, color: Color.spentWhite())
                     .foregroundColor(Color.spentWhite())
                 }
+                Spacer()
             }
         }
     }
