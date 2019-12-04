@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Result<String> {
     case success
@@ -24,7 +25,8 @@ enum NetworkResponse:String {
 }
 
 struct NetworkManager {
-    static let environment : NetworkEnvironment = .production
+    @ObservedObject var environmentData = EnvironmentData()
+    static let environment : NetworkEnvironment = .development
     private let router = Router<SpentAllApi>()
     
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
@@ -53,6 +55,8 @@ struct NetworkManager {
                     }
                     do {
                         let apiResponse = try JSONDecoder().decode(UserSettingsResponse.self, from: responseData)
+                        print(apiResponse)
+                        self.environmentData.userSettings = apiResponse.user
                         completion(apiResponse.user, nil)
                     } catch {
                         completion(nil, NetworkResponse.unableToDecode.rawValue)

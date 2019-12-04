@@ -8,29 +8,40 @@
 
 import Foundation
 
-struct UserSettingsResponse: Decodable {
-    var user: UserSettings
-    
+struct UserSettingsResponse {
+    var success: Bool?
+    var message: String?
+    var token: String?
+    var user: UserSettings?
+    var error: APIError?
+}
+
+extension UserSettingsResponse: Decodable {
     private enum UserSettingsResponseCodingKeys: CodingKey {
-        case user
+        case user, success, message, token, error
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: UserSettingsResponseCodingKeys.self)
 
-        user = try container.decode(UserSettings.self, forKey: .user)
+        user = try container.decodeIfPresent(UserSettings.self, forKey: .user) ?? nil
+        success = try container.decodeIfPresent(Bool.self, forKey: .success) ?? nil
+        message = try container.decodeIfPresent(String.self, forKey: .message) ?? nil
+        token = try container.decodeIfPresent(String.self, forKey: .token) ?? nil
+        error = try container.decodeIfPresent(APIError.self, forKey: .error) ?? nil
     }
-    
 }
 
-struct UserSettings: Decodable {
+struct UserSettings {
     var userName: String
     var userEmail: String
     var target: Int
     var cycle: String
     var currency: String
-    var categories: String
-    
+    var categories: [String]
+}
+
+extension UserSettings: Decodable {
     private enum UserSettingsCodingKeys: CodingKey {
         case userName, userEmail, target, cycle, currency, categories
     }
@@ -43,25 +54,25 @@ struct UserSettings: Decodable {
         target = try container.decode(Int.self, forKey: .target)
         cycle = try container.decode(String.self, forKey: .cycle)
         currency = try container.decode(String.self, forKey: .currency)
-        categories = try container.decode(String.self, forKey: .categories)
+        let categoriesString = try container.decode(String.self, forKey: .categories)
+        categories = categoriesString.components(separatedBy: ",")
     }
-    
 }
 
-    
-    
-    //    func encode(to encoder: Encoder) throws {
-    //        var container = encoder.container(keyedBy: CodingKeys.self)
-    //
-    //        try container.encode(type, forKey: .type)
-    //        try container.encode(quantity, forKey: .quantity)
-    //
-    //        try container.encode(extraFrosting, forKey: .extraFrosting)
-    //        try container.encode(addSprinkles, forKey: .addSprinkles)
-    //
-    //        try container.encode(name, forKey: .name)
-    //        try container.encode(streetAddress, forKey: .streetAddress)
-    //        try container.encode(city, forKey: .city)
-    //        try container.encode(zip, forKey: .zip)
-    //    }
+struct User {
+     var userName: String
+     var userEmail: String
+}
 
+extension User: Decodable {
+    private enum UserCodingKeys: CodingKey {
+        case userName, userEmail
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: UserCodingKeys.self)
+
+        userName = try container.decode(String.self, forKey: .userName)
+        userEmail = try container.decode(String.self, forKey: .userEmail)
+    }
+}

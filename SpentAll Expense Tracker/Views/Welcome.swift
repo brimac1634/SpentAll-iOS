@@ -81,6 +81,9 @@ struct Welcome: View {
                     .imageScale(.large)
                     .padding(.trailing, (geometry.size.width / 2.0) + -30) // image width = 60
             )
+//                .alert(isPresented: $environmentData.alert.tit) {
+//                Alert(title: Text(), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+//            }
 //                .onAppear(perform: self.checkAuthentication)
             
         }

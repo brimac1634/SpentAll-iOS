@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct SignIn: View {
+    @EnvironmentObject var environmentData: EnvironmentData
     @State var email: String = ""
     @State var password: String = ""
+    @State private var error = true
     
     var networkManager: NetworkManager
     
@@ -49,15 +51,15 @@ struct SignIn: View {
                 }
             }
         }
+        .alert(isPresented: $error) {
+            Alert(title: Text("test"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+        }
     }
     
     func login(_ email: String, _ password: String) {
         networkManager.login(email: email, password: password) { (userSettings, error) in
             if let error = error {
                 print(error)
-            }
-            if let userSettings = userSettings {
-                print(userSettings)
             }
         }
     }

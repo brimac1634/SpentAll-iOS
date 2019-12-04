@@ -8,6 +8,12 @@
 
 import SwiftUI
 
+extension String {
+    func isValid() -> Bool {
+        return self.count > 0
+    }
+}
+
 extension Color {
     static func spentDarkPurple(a: Double = 1) -> Color {
         return Color(red: 102 / 255, green: 114 / 255, blue: 228 / 255, opacity: a)
