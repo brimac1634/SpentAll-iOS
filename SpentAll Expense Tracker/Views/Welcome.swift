@@ -77,6 +77,9 @@ struct Welcome: View {
                         Spacer()
                     }
                     NavigationLink(destination: TabBarView(), isActive: self.$environmentData.isLoggedIn) { EmptyView() }
+                    if self.environmentData.isLoading {
+                        CustomLoader()
+                    }
                 }
             }
             .accentColor(Color.spentWhite())
@@ -86,6 +89,7 @@ struct Welcome: View {
                     .imageScale(.large)
                     .padding(.trailing, (geometry.size.width / 2.0) + -30) // image width = 60
             )
+            
 //                .alert(isPresented: environmentData.alert?.title != nil) {
 //                    Alert(title: Text(environmentData.alert?.title), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
 //            }

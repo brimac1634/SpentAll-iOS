@@ -47,16 +47,16 @@ struct SignIn: View {
                     .kerning(2)
                     .underline(true, color: Color.spentWhite())
                     .foregroundColor(Color.spentWhite())
+                        .padding(.vertical, 20)
                 }
-                Spacer()
             }
         }
     }
     
     func login(_ email: String, _ password: String) {
         networkManager.login(email: email, password: password) { (userSettings, error) in
-            if let error = error {
-                print(error)
+            if let userSettings = userSettings {
+                print(userSettings)
             }
         }
     }

@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 
 final class EnvironmentData: ObservableObject {
+    @Published var isLoading: Bool = false
     @Published var isLoggedIn: Bool = false
     @Published var alert: CustomAlert?
     @Published var userSettings: UserSettings?

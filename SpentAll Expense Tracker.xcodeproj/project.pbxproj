@@ -46,6 +46,7 @@
 		D254C825238CF72B00E4B7E1 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C824238CF72B00E4B7E1 /* Ring.swift */; };
 		D254C827238D078900E4B7E1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C826238D078900E4B7E1 /* CustomButton.swift */; };
 		D263EB9E2390FABB00935CB6 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263EB9D2390FABB00935CB6 /* ContactUs.swift */; };
+		D2C0A2CC2398A930008CF8CE /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C0A2CB2398A930008CF8CE /* CustomLoader.swift */; };
 		D2CB1B362396485A002A1DCB /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CB1B352396485A002A1DCB /* EndPointType.swift */; };
 		D2CB1B382396495A002A1DCB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CB1B372396495A002A1DCB /* HTTPMethod.swift */; };
 		D2CB1B3A239649BD002A1DCB /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CB1B39239649BD002A1DCB /* HTTPTask.swift */; };
@@ -146,6 +147,7 @@
 		D254C824238CF72B00E4B7E1 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		D254C826238D078900E4B7E1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D263EB9D2390FABB00935CB6 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
+		D2C0A2CB2398A930008CF8CE /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		D2CB1B352396485A002A1DCB /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		D2CB1B372396495A002A1DCB /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		D2CB1B39239649BD002A1DCB /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				D254C815238BD13800E4B7E1 /* CustomInput.swift */,
 				D254C824238CF72B00E4B7E1 /* Ring.swift */,
 				D254C826238D078900E4B7E1 /* CustomButton.swift */,
+				D2C0A2CB2398A930008CF8CE /* CustomLoader.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				D2CB1B4A239655D0002A1DCB /* SpentAllEndPoint.swift in Sources */,
 				D2CB1B3A239649BD002A1DCB /* HTTPTask.swift in Sources */,
 				D254C818238BD40700E4B7E1 /* Extensions.swift in Sources */,
+				D2C0A2CC2398A930008CF8CE /* CustomLoader.swift in Sources */,
 				D2CB1B362396485A002A1DCB /* EndPointType.swift in Sources */,
 				D2DC725723950AC3008C0AF3 /* WelcomeInfo.swift in Sources */,
 				D22D790F238E457400329437 /* UserSettingsModel.swift in Sources */,
