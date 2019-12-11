@@ -25,7 +25,6 @@ enum NetworkResponse:String {
 }
 
 struct NetworkManager {
-    @ObservedObject var environmentData = EnvironmentData()
     static let environment : NetworkEnvironment = .development
     private let router = Router<SpentAllApi>()
     
@@ -40,7 +39,7 @@ struct NetworkManager {
     }
     
     //MARK - User Methods
-    func login(email: String, password: String, completion: @escaping (_ userSettings: UserSettings?, _ error: String?) -> ()) {
+    func login(email: String, password: String, completion: @escaping (_ UserSettingsResponse: UserSettingsResponse?, _ error: String?) -> ()) {
         router.request(.login(email: email, password: password)) { (data, response, error) in
             if error != nil {
                 completion(nil, "Please check your network connection.")
@@ -55,9 +54,7 @@ struct NetworkManager {
                     }
                     do {
                         let apiResponse = try JSONDecoder().decode(UserSettingsResponse.self, from: responseData)
-                        print(apiResponse)
-                        self.environmentData.userSettings = apiResponse.user
-                        completion(apiResponse.user, nil)
+                        completion(apiResponse, nil)
                     } catch {
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
                     }

@@ -11,17 +11,6 @@ import SwiftUI
 struct Welcome: View {
     @EnvironmentObject var environmentData: EnvironmentData
     
-    //    private func checkAuthentication() {
-    //        SpentAllClient().checkUser() { result in
-    //            switch result {
-    //            case .success(let user):
-    //                print(user?.name ?? "")
-    //            case .failure(let error):
-    //                print("error: \(error)")
-    //            }
-    //        }
-    //    }
-    
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
@@ -49,7 +38,7 @@ struct Welcome: View {
                         }
                         Spacer()
                         VStack {
-                            NavigationLink(destination: SignIn(networkManager: NetworkManager())) {
+                            NavigationLink(destination: SignIn()) {
                                 CustomButton(label: "Login", isOn: true, color: .spentPurple()) {
                                 }.padding(.vertical, CGFloat(10))
                             }
@@ -76,9 +65,7 @@ struct Welcome: View {
                         }
                         Spacer()
                     }
-                    NavigationLink(destination: TabBarView(), isActive: self.$environmentData.isLoggedIn) { EmptyView() }
-                    if self.environmentData.isLoading {
-                        CustomLoader()
+                    NavigationLink(destination: TabBarView(), isActive: self.$environmentData.isLoggedIn) { EmptyView()
                     }
                 }
             }
@@ -89,10 +76,6 @@ struct Welcome: View {
                     .imageScale(.large)
                     .padding(.trailing, (geometry.size.width / 2.0) + -30) // image width = 60
             )
-            
-//                .alert(isPresented: environmentData.alert?.title != nil) {
-//                    Alert(title: Text(environmentData.alert?.title), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
-//            }
             //                .onAppear(perform: self.checkAuthentication)
             
         }

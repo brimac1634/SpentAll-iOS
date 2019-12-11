@@ -12,8 +12,7 @@ struct SignIn: View {
     @EnvironmentObject var environmentData: EnvironmentData
     @State var email: String = ""
     @State var password: String = ""
-    
-    var networkManager: NetworkManager
+    @State private var showAlert = false
     
     var body: some View {
         ZStack {
@@ -31,7 +30,7 @@ struct SignIn: View {
                 CustomInput(placeholder: "Password", hideText: true, textInput: $password)
                     .padding(.vertical, CGFloat(10))
                 CustomButton(label: "Login", isOn: true, color: Color.spentPink()) {
-                    self.login(self.email, self.password)
+                    self.environmentData.handleLogin(email: self.email, password: self.password)
                 }.padding(.vertical, CGFloat(10))
                 Text(verbatim: "OR")
                     .font(Font.karla(20))
@@ -50,20 +49,18 @@ struct SignIn: View {
                         .padding(.vertical, 20)
                 }
             }
-        }
-    }
-    
-    func login(_ email: String, _ password: String) {
-        networkManager.login(email: email, password: password) { (userSettings, error) in
-            if let userSettings = userSettings {
-                print(userSettings)
+            if self.environmentData.isLoading {
+                CustomLoader()
             }
+        }
+        .alert(isPresented: $environmentData.hasError) {
+            Alert(title: Text(self.environmentData.userSettingsResponse?.error?.title ?? "Error"), message: Text(self.environmentData.userSettingsResponse?.error?.message ?? "Please try again later"), dismissButton: Alert.Button.default(Text("Okay")))
         }
     }
 }
 
 struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn(networkManager: NetworkManager())
+        SignIn()
     }
 }

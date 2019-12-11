@@ -12,9 +12,28 @@ import Combine
 final class EnvironmentData: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var isLoggedIn: Bool = false
-    @Published var alert: CustomAlert?
-    @Published var userSettings: UserSettings?
-    @Published var expenses: [Expense]?
+//    @Published var alert: CustomAlert?
+    @Published var hasError: Bool = false
+    @Published var userSettingsResponse: UserSettingsResponse?
+    @Published var expensesResponse: ExpenseResponse?
+    
+    let networkManager = NetworkManager()
+    
+    func handleLogin(email: String, password: String) {
+        self.isLoading = true
+        networkManager.login(email: email, password: password) { (userSettingsResponse, error) in
+            DispatchQueue.main.async {
+                if let response = userSettingsResponse {
+                    self.isLoggedIn = response.success ?? false
+                    self.userSettingsResponse = response
+                    if (response.error != nil) {
+                        self.hasError = true
+                    }
+                }
+                self.isLoading = false
+            } 
+        }
+    }
 }
 
 //    @Published var userName: String = ""

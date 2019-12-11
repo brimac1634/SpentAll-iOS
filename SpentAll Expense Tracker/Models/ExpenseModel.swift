@@ -8,6 +8,23 @@
 
 import SwiftUI
 
+struct ExpenseResponse {
+    var expenses: [Expense]?
+    var error: APIError?
+}
+
+extension ExpenseResponse: Decodable {
+    private enum ExpenseResponseCodingKeys: CodingKey {
+        case expenses, error
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: ExpenseResponseCodingKeys.self)
+        expenses = try container.decodeIfPresent([Expense].self, forKey: .expenses) ?? nil
+        error = try container.decodeIfPresent(APIError.self, forKey: .error) ?? nil
+    }
+}
+
 struct Expense {
     var id: Int
 //    var user_id: Int
