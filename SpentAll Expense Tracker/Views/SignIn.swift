@@ -9,10 +9,9 @@
 import SwiftUI
 
 struct SignIn: View {
-    @EnvironmentObject var environmentData: EnvironmentData
+    @ObservedObject var userViewModel = UserViewModel()
     @State var email: String = ""
     @State var password: String = ""
-    @State private var showAlert = false
     
     var body: some View {
         ZStack {
@@ -30,7 +29,7 @@ struct SignIn: View {
                 CustomInput(placeholder: "Password", hideText: true, textInput: $password)
                     .padding(.vertical, CGFloat(10))
                 CustomButton(label: "Login", isOn: true, color: Color.spentPink()) {
-                    self.environmentData.handleLogin(email: self.email, password: self.password)
+                    self.userViewModel.handleLogin(email: self.email, password: self.password)
                 }.padding(.vertical, CGFloat(10))
                 Text(verbatim: "OR")
                     .font(Font.karla(20))
@@ -49,12 +48,12 @@ struct SignIn: View {
                         .padding(.vertical, 20)
                 }
             }
-            if self.environmentData.isLoading {
+            if self.userViewModel.isLoading {
                 CustomLoader()
             }
         }
-        .alert(isPresented: $environmentData.hasError) {
-            Alert(title: Text(self.environmentData.userSettingsResponse?.error?.title ?? "Error"), message: Text(self.environmentData.userSettingsResponse?.error?.message ?? "Please try again later"), dismissButton: Alert.Button.default(Text("Okay")))
+        .alert(isPresented: $userViewModel.hasError) {
+            Alert(title: Text(self.userViewModel.userSettingsResponse?.error?.title ?? "Error"), message: Text(self.userViewModel.userSettingsResponse?.error?.message ?? "Please try again later"), dismissButton: Alert.Button.default(Text("Okay")))
         }
     }
 }

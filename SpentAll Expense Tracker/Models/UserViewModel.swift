@@ -1,21 +1,19 @@
 //
-//  EnvironmentData.swift
+//  UserViewModel.swift
 //  SpentAll Expense Tracker
 //
-//  Created by Brian MacPherson on 25/11/2019.
+//  Created by Brian MacPherson on 11/12/2019.
 //  Copyright © 2019 Brian MacPherson. All rights reserved.
 //
 
 import SwiftUI
 import Combine
 
-final class EnvironmentData: ObservableObject {
+final class UserViewModel: ObservableObject {
     @Published var isLoading: Bool = false
-    @Published var isLoggedIn: Bool = false
-//    @Published var alert: CustomAlert?
+    @Published var isLoggedIn: Bool = true
     @Published var hasError: Bool = false
     @Published var userSettingsResponse: UserSettingsResponse?
-    @Published var expensesResponse: ExpenseResponse?
     
     let networkManager = NetworkManager()
     
@@ -31,7 +29,7 @@ final class EnvironmentData: ObservableObject {
                     }
                 }
                 self.isLoading = false
-            } 
+            }
         }
     }
 }

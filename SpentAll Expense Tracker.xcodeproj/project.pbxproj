@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21BAC3A23A10022000CAF50 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21BAC3923A10022000CAF50 /* UserViewModel.swift */; };
 		D22D790F238E457400329437 /* UserSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D790E238E457400329437 /* UserSettingsModel.swift */; };
 		D22D7911238E4D8F00329437 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7910238E4D8F00329437 /* SignIn.swift */; };
 		D22D7913238E504D00329437 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D7912238E504D00329437 /* Welcome.swift */; };
@@ -35,7 +36,7 @@
 		D254C7FC238BA81900E4B7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7FB238BA81900E4B7E1 /* Assets.xcassets */; };
 		D254C7FF238BA81900E4B7E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D254C7FE238BA81900E4B7E1 /* Preview Assets.xcassets */; };
 		D254C811238BBBF500E4B7E1 /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C810238BBBF500E4B7E1 /* ExpenseModel.swift */; };
-		D254C813238BBE5F00E4B7E1 /* EnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C812238BBE5F00E4B7E1 /* EnvironmentData.swift */; };
+		D254C813238BBE5F00E4B7E1 /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C812238BBE5F00E4B7E1 /* ExpensesViewModel.swift */; };
 		D254C816238BD13800E4B7E1 /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C815238BD13800E4B7E1 /* CustomInput.swift */; };
 		D254C818238BD40700E4B7E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C817238BD40700E4B7E1 /* Extensions.swift */; };
 		D254C81A238BDB8700E4B7E1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254C819238BDB8700E4B7E1 /* Home.swift */; };
@@ -107,6 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D21BAC3923A10022000CAF50 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D22D790E238E457400329437 /* UserSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsModel.swift; sourceTree = "<group>"; };
 		D22D7910238E4D8F00329437 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		D22D7912238E504D00329437 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
@@ -136,7 +138,7 @@
 		D254C800238BA81900E4B7E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D254C801238BA81900E4B7E1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D254C810238BBBF500E4B7E1 /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
-		D254C812238BBE5F00E4B7E1 /* EnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentData.swift; sourceTree = "<group>"; };
+		D254C812238BBE5F00E4B7E1 /* ExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
 		D254C815238BD13800E4B7E1 /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
 		D254C817238BD40700E4B7E1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D254C819238BDB8700E4B7E1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -295,8 +297,9 @@
 			isa = PBXGroup;
 			children = (
 				D254C810238BBBF500E4B7E1 /* ExpenseModel.swift */,
-				D254C812238BBE5F00E4B7E1 /* EnvironmentData.swift */,
+				D254C812238BBE5F00E4B7E1 /* ExpensesViewModel.swift */,
 				D22D790E238E457400329437 /* UserSettingsModel.swift */,
+				D21BAC3923A10022000CAF50 /* UserViewModel.swift */,
 				D2CB1B5023978E75002A1DCB /* APIErrorModel.swift */,
 				D2CB1B522397A3C3002A1DCB /* CustomAlertModel.swift */,
 			);
@@ -527,7 +530,7 @@
 				D254C7CF238BA81100E4B7E1 /* SceneDelegate.swift in Sources */,
 				D2CB1B472396503B002A1DCB /* Router.swift in Sources */,
 				D2CB1B5123978E75002A1DCB /* APIErrorModel.swift in Sources */,
-				D254C813238BBE5F00E4B7E1 /* EnvironmentData.swift in Sources */,
+				D254C813238BBE5F00E4B7E1 /* ExpensesViewModel.swift in Sources */,
 				D254C823238CE07800E4B7E1 /* Settings.swift in Sources */,
 				D22D7911238E4D8F00329437 /* SignIn.swift in Sources */,
 				D2CB1B4123964BCD002A1DCB /* URLParameterEncoder.swift in Sources */,
@@ -545,6 +548,7 @@
 				D263EB9E2390FABB00935CB6 /* ContactUs.swift in Sources */,
 				D2CB1B4A239655D0002A1DCB /* SpentAllEndPoint.swift in Sources */,
 				D2CB1B3A239649BD002A1DCB /* HTTPTask.swift in Sources */,
+				D21BAC3A23A10022000CAF50 /* UserViewModel.swift in Sources */,
 				D254C818238BD40700E4B7E1 /* Extensions.swift in Sources */,
 				D2C0A2CC2398A930008CF8CE /* CustomLoader.swift in Sources */,
 				D2CB1B362396485A002A1DCB /* EndPointType.swift in Sources */,

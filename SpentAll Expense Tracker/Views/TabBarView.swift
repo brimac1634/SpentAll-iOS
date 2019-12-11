@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @EnvironmentObject var environmentData: EnvironmentData
     @State var selected = 0
     
     

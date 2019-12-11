@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SignUp: View {
     let isReset: Bool
+    @ObservedObject var userViewModel = UserViewModel()
     @State var name = ""
     @State var email = ""
     
@@ -51,6 +52,12 @@ struct SignUp: View {
                     .foregroundColor(Color.spentWhite())
                 }
                 Spacer()
+            }
+            .alert(isPresented: $userViewModel.hasError) {
+                Alert(title: Text(self.userViewModel.userSettingsResponse?.error?.title ?? "Error"), message: Text(self.userViewModel.userSettingsResponse?.error?.message ?? "Please try again later"), dismissButton: Alert.Button.default(Text("Okay")))
+            }
+            if self.userViewModel.isLoading {
+                CustomLoader()
             }
         }
     }
