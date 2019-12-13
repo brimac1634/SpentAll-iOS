@@ -9,12 +9,12 @@
 import SwiftUI
 import Combine
 
-final class ExpensesViewModel: ObservableObject {
-    @Published var isLoading: Bool = false
-    @Published var isLoggedIn: Bool = false
+class ExpensesViewModel {
+    var isLoading: Bool = false
+    var isLoggedIn: Bool = false
 //    @Published var alert: CustomAlert?
-    @Published var hasError: Bool = false
-    @Published var expensesResponse: ExpenseResponse?
+    var hasError: Bool = false
+    var expensesResponse: ExpenseResponse?
     
     let networkManager = NetworkManager()
     

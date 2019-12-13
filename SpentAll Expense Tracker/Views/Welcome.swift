@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Welcome: View {
-    @ObservedObject var userViewModel: UserViewModel
+    @EnvironmentObject var environmentViewModel: EnvironmentViewModel
     
     var body: some View {
         GeometryReader { geometry in
@@ -65,14 +65,9 @@ struct Welcome: View {
                         }
                         Spacer()
                     }
-                    NavigationLink(destination: TabBarView(), isActive: self.$userViewModel.isLoggedIn) { EmptyView()
-                    }
                 }
             }
             .accentColor(Color.spentWhite())
-            .navigationBarTitle(Text(""), displayMode: .inline)
-            //                .onAppear(perform: self.checkAuthentication)
-            
         }
         
     }
@@ -80,6 +75,6 @@ struct Welcome: View {
 
 struct Welcome_Previews: PreviewProvider {
     static var previews: some View {
-        Welcome(userViewModel: UserViewModel())
+        Welcome().environmentObject(EnvironmentViewModel())
     }
 }

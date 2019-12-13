@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SignUp: View {
     let isReset: Bool
-    @ObservedObject var userViewModel = UserViewModel()
+    @EnvironmentObject var environmentViewModel: EnvironmentViewModel
     @State var name = ""
     @State var email = ""
     
@@ -53,10 +53,10 @@ struct SignUp: View {
                 }
                 Spacer()
             }
-            .alert(isPresented: $userViewModel.hasError) {
-                Alert(title: Text(self.userViewModel.userSettingsResponse?.error?.title ?? "Error"), message: Text(self.userViewModel.userSettingsResponse?.error?.message ?? "Please try again later"), dismissButton: Alert.Button.default(Text("Okay")))
+            .alert(isPresented: $environmentViewModel.userViewModel.hasError) {
+                Alert(title: Text(self.environmentViewModel.userViewModel.userSettingsResponse?.error?.title ?? "Error"), message: Text(self.environmentViewModel.userViewModel.userSettingsResponse?.error?.message ?? "Please try again later"), dismissButton: Alert.Button.default(Text("Okay")))
             }
-            if self.userViewModel.isLoading {
+            if self.environmentViewModel.userViewModel.isLoading {
                 CustomLoader()
             }
         }
@@ -65,6 +65,6 @@ struct SignUp: View {
 
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp(isReset: false)
+        SignUp(isReset: false).environmentObject(EnvironmentViewModel())
     }
 }

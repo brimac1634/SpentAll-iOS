@@ -9,13 +9,14 @@
 import SwiftUI
 import Combine
 
-final class UserViewModel: ObservableObject {
-    @Published var isLoading: Bool = false
-    @Published var isLoggedIn: Bool = true
-    @Published var hasError: Bool = false
-    @Published var userSettingsResponse: UserSettingsResponse?
+class UserViewModel {
+    var isLoading = false
+    var isLoggedIn = false
+    var hasError = false
+    var userSettingsResponse: UserSettingsResponse?
     
     let networkManager = NetworkManager()
+    
     
     func handleLogin(email: String, password: String) {
         self.isLoading = true
@@ -30,6 +31,7 @@ final class UserViewModel: ObservableObject {
                 }
                 self.isLoading = false
             }
+        
         }
     }
 }
